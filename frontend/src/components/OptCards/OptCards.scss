@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5%;
+    gap: 5%;
 
     .left-section {
       flex: 1;
@@ -205,6 +205,7 @@
         .addImg{
             background-color: #F7F8FA;
             border-radius: 6px;
+            cursor: pointer;
         }
 
         .right-input-box{
@@ -216,40 +217,49 @@
             line-height: 1;
             letter-spacing: 0px;
             vertical-align: middle;
+            outline: none;
 
             &::placeholder{
                 color: #AFAFAF;
             }
+
+            &:focus{
+                border: none;
+                outline: none;
+            }
+        } 
+
+      }
+
+      .keyword-container {
+        margin-top: 0.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+
+        .keywordBox {
+            background-color: #0F62FE12;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            color: #1A1A1A;
+            white-space: nowrap;
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 1;
+            vertical-align: middle;
+            white-space: nowrap;
+
+            display: flex;
+            gap: 0.75rem;
+
+            .closeIcon{
+                cursor: pointer;
+            }
         }
 
-        .keyword-container {
-            margin-top: 0.75rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            padding: 0.5rem 0;
 
-            .keywordBox {
-                background-color: #1c73e8;
-                // background-color: #0F62FE12;
-                border: none;
-                border-radius: 4px;
-                padding: 6px 10px;
-                color: #1A1A1A;
-                white-space: nowrap;
-                background-color: #1A1A1A;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 1;
-                vertical-align: middle;
-    
-              }
-
-
-          }
-          
-          
-          
       }
     }
   }

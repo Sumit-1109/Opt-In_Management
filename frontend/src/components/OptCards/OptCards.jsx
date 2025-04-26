@@ -5,6 +5,7 @@ import out from "../../assets/out.png";
 import whatsapp from "../../assets/whatsapp.png";
 import edit from "../../assets/edit.png";
 import add from "../../assets/add.png";
+import close from "../../assets/close.png";
 
 function OptCards({ optCard }) {
   const [isToggled, setIsToggled] = useState(false);
@@ -21,6 +22,10 @@ function OptCards({ optCard }) {
       setKeywordInput("");
     }
   };
+
+  const handleDeleteKeyword = (deleteIndex) => {
+    setKeywords(prev => prev.filter((_, index) => index !== deleteIndex));
+  }
 
   const handleInputKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -87,6 +92,7 @@ function OptCards({ optCard }) {
             {keywords.map((keyword, index) => (
               <div className="keywordBox" key={index}>
                 <p className="keyword">{keyword}</p>
+                <img className="closeIcon" onClick={() => handleDeleteKeyword(index)} src={close} alt="close" />
               </div>
             ))}
           </div>
